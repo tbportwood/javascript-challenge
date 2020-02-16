@@ -36,7 +36,7 @@ button.on("click", function(){
                                                 var new_date_time = ufo_sight.datetime.split('/');
                                                 var convert_date_time =  new Date(parseInt(new_date_time[2]), parseInt(new_date_time[0]), parseInt(new_date_time[1]));
                                                 console.log(convert_date_time);
-                                                if(convert_date_time > convert_date){
+                                                if(convert_date_time.getTime() != convert_date.getTime()){
                                                     return false;
                                                 };
                                             }
